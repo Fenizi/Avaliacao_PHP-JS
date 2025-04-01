@@ -1,16 +1,13 @@
-class Aluno extends Pessoa{
+import { Pessoa } from "./Pessoa.js";
 
-    RM; 
-    Curso;
-
-    constructor(Nome,Idade, CPF,RM,Curso){
-        super(Nome, Idade, CPF)
-        this.RM = RM;
-        this.Curso = Curso;
+export class Aluno extends Pessoa {
+    constructor(nome, idade) {
+        super(nome, idade);
+        this.nome = nome;
+        this.idade = idade;
     }
 
-    falar(){
-        console.log("RM: " + this.RM);
-        console.log("Curso: " + this.Curso)
+    falar() {
+        console.log("Aluno "+ this.nome +" perguntado...");
     }
 }

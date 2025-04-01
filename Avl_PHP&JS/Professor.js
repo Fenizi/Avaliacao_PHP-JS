@@ -1,16 +1,15 @@
-class Professor extends Pessoa{
+import { Pessoa } from "./Pessoa.js";
 
-    matricula;
+export class Professor extends Pessoa {
     disciplina;
-
-    constructor(Nome,Idade, CPF, matricula,disciplina){
-        super(Nome, Idade, CPF)
-        this.matricula = matricula;
+    constructor(nome, idade, disciplina) {
+        super(nome, idade);
         this.disciplina = disciplina;
+        //this.nome = nome;
+       // this.idade = idade; explicação
     }
 
-    falar(){
-        console.log("Matricula: " + this.matricula)
-        console.log("Disciplina: " + this.disciplina)
+    falar() {
+        console.log("Professor" + this.nome +" dando aula...");
     }
 }
